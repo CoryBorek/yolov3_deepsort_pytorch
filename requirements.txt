@@ -1,11 +1,16 @@
 # pip install -U -r requirements.txt
+--index-url https://download.pytorch.org/whl/cpu
+--extra-index-url https://pypi.org/simple
+
 numpy
 opencv-python >= 4.1
-torch >= 1.4 --index-url https://download.pytorch.org/whl/cpu
+torch == 1.11+cpu
+torchvision >= 0.12
 matplotlib
 pycocotools
 tqdm
 pillow
+scipy
 
 # Nvidia Apex (optional) for mixed precision training --------------------------
 # git clone https://github.com/NVIDIA/apex && cd apex && pip install -v --no-cache-dir --global-option="--cpp_ext" --global-option="--cuda_ext" . --user && cd .. && rm -rf apex
